@@ -1,0 +1,136 @@
+
+@font-face {
+	font-family: 'Gotham Rounded';
+	src: url('/Assets/fonts/GothamRounded-Bold.woff2') format('woff2'),
+		url('/Assets/fonts/GothamRounded-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Rounded';
+	src: url('/Assets/fonts/GothamRounded-Light.woff2') format('woff2'),
+		url('/Assets/fonts/GothamRounded-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Rounded';
+	src: url('/Assets/fonts/GothamRounded-Book.woff2') format('woff2'),
+		url('/Assets/fonts/GothamRounded-Book.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Gotham Rounded, sans-serif;
+    padding-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 0 40px;
+    grid-template-areas: ". content content content content .";
+}
+
+.content {
+    grid-area: content;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.dark-header {
+    background-color: #005681;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.light-header {
+    color: white;
+    background-color: #00aaff;
+    padding-top: 500px;
+    margin-top: -500px;
+}
+
+.brand-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 0.5rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+.dark-header-divider {
+    background-image: url("/Assets/images/download.svg");
+    height: 150px;
+    margin-top: -5px;
+    background-position: bottom left;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.light-header-divider {
+    background-image: url("/Assets/images/light-background.svg");
+    height: 150px;
+    margin-top: -5px;
+    background-position: bottom left;
+    background-size: cover;
+}
+
+.email-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.email-form input {
+    background-color: white;
+    color: #005681;
+    border: 2px solid black;
+    border-radius: .5em;
+    padding: .5em 1em;
+    margin-right: 1em;
+    outline: none;
+    flex-grow: 1;
+}
+
+.email-form input:focus {
+    background-color: #dcf3ff;
+}
+
+.email-form button {
+    color: white;
+    background-color: #111;
+    border: 2px solid white;
+    border-radius: .5em;
+    padding: .5em 1em;
+    max-width: 250px;
+    cursor: pointer;
+}
+
+.email-form button:hover, .email-form button:focus {
+    background-color: #333;
+}
+
